@@ -10,20 +10,20 @@ def getnumbers():
     return number1, number2, number3, number4
 
 def highestnumber(num1_, num2_, num3_, num4_):
-    max = num1_
-    if num2_ > max:
-        max = num2_
-    elif num3_ > max:
-        max = num3_
+    if num1_ > num2_ and num1_ > num3_:
+        return num1_
+    elif num2_ > num3_ and num2_ > num4_:
+        return num2_
+    elif num3_ > num4_:
+        return num3_
     else:
-        max = num4_
-    return max
+        return num4_
 
 def secondhighest (num1_, num2_, num3_, num4_):
     max = num2_
-    if num1_ > max:
+    if num1_ > max or num3_ < max:
         max = num1_
-    elif num3_ > max:
+    elif num3_ > max or num4_ < max:
         max = num3_
     else:
         max = num4_
