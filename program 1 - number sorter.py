@@ -19,7 +19,19 @@ def highestnumber(num1_, num2_, num3_, num4_):
         max = num4_
     return max
 
+def secondhighest (num1_, num2_, num3_, num4_):
+    max = num2_
+    if num1_ > max:
+        max = num1_
+    elif num3_ > max:
+        max = num3_
+    else:
+        max = num4_
+    return max
+
 
 num1, num2, num3, num4 = getnumbers()
 
 highestnumber_ = highestnumber (num1, num2, num3, num4)
+
+secondhighest_ = secondhighest (num1, num2, num3, num4)
