@@ -39,6 +39,18 @@ def thirdhighest (num1_, num2_, num3_, num4_):
         max = num4_
     return max
 
+def lowestnumber (num1_, num2_, num3_, num4_):
+    max = num4_
+    if num1_ > max:
+        max = num1_
+    elif num2_ > max:
+        max = num2_
+    else:
+        max = num3_
+    return max
+
+def displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_):
+    print (f'The order of the numbers you entered from highest to lowest is: {highestnumber_}, {secondhighest_}, {thirdhighest_}, {lowestnumber_}.')
 
 num1, num2, num3, num4 = getnumbers()
 
@@ -47,3 +59,7 @@ highestnumber_ = highestnumber (num1, num2, num3, num4)
 secondhighest_ = secondhighest (num1, num2, num3, num4)
 
 thirdhighest_ = thirdhighest (num1, num2, num3, num4)
+
+lowestnumber_ = lowestnumber (num1, num2, num3, num4)
+
+displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_)
