@@ -20,24 +20,22 @@ def highestnumber(num1_, num2_, num3_, num4_):
         return num4_
 
 def secondhighest (num1_, num2_, num3_, num4_):
-    if num2_ > num1_ and num2_ > num3_:
-        return num2_
-    elif num2_ < num3_:
-        return num3_
-    elif num2 > num4_:
-        return num4_
-    else:
-        return num1_
+    max = num2_
+    if num1_ != max:
+        return max
+    elif num3_ != max:
+        return max
+    elif num4_ != num2_:
+        return max
 
 def thirdhighest (num1_, num2_, num3_, num4_):
     max = num3_
-    if num1_ > max:
-        max = num1_
-    elif num2_ > max:
-        max = num2_
-    else:
-        max = num4_
-    return max
+    if num1_ != max:
+        return max
+    elif num2_ != max:
+        return max
+    elif num4_ != max:
+        return max
 
 def lowestnumber (num1_, num2_, num3_, num4_):
     if num1_ < num2_ and num1_ < num3_:
