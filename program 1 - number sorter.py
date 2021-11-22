@@ -9,10 +9,15 @@ def getnumbers():
     number4 = float(input("Enter fourth number: "))
     return number1, number2, number3, number4
 
-def firstcase (num1_, num2_, num3_, num4_):
+def highestnumber(num1_, num2_, num3_, num4_):
     if num1_ > num2_ and num1_ > num3_:
-        if num1_ > num4_:
-             print (f"The order of the numbers you enteres, from highest to lowest, is {num1_}, {num2_}, {num3_}, {num4_}.")
+        return num1_
+    elif num2_ > num3_ and num2_ > num4_:
+        return num2_
+    elif num3_ > num4_:
+        return num3_
+    else:
+        return num4_
 
 def secondhighest (num1_, num2_, num3_, num4_):
     if num1_ < num2_ and num2_ < num3_:
@@ -43,12 +48,17 @@ def lowestnumber (num1_, num2_, num3_, num4_):
     else:
         return num4_
 
+def displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_):
+    print (f'The order of the numbers you entered from highest to lowest is: {highestnumber_}, {secondhighest_}, {thirdhighest_}, {lowestnumber_}.')
+
 num1, num2, num3, num4 = getnumbers()
 
-firstcase_ = firstcase (num1, num2, num3, num4)
+highestnumber_ = highestnumber (num1, num2, num3, num4)
 
 secondhighest_ = secondhighest (num1, num2, num3, num4)
 
 thirdhighest_ = thirdhighest (num1, num2, num3, num4)
 
 lowestnumber_ = lowestnumber (num1, num2, num3, num4)
+
+displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_)
