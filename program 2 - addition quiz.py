@@ -7,6 +7,16 @@
 import random 
 import time
 
+print ("Welcome to addition quiz!")
+
+time.sleep (1)
+
+print ("There will be 10 questions in total and every correct answer is equivalent to one point.")
+
+time.sleep (1)
+
+print ("Good Luck!")
+
 def first ():
     correct = int(1)
     incorrect = int(0)
@@ -142,13 +152,27 @@ def ninth ():
         print ("Your answer is incorrect.")
         return incorrect
 
-
-def displayresult (num1, num2, num3, num4, num5, num6, num7, num8, num9):
-    result = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9
-    time.sleep(1)
-    print (f"Based from the results, your total score is {result}/9.")
+def tenth ():
+    correct = int(1)
+    incorrect = int(0)
+    num1 = (random.randint (0, 99))
+    num2 = (random.randint (0, 99))
+    print (f'10. {num1} + {num2}')
+    answer = int(input("Enter answer: "))
     time.sleep (1)
-    print ("Thank you for joining the quiz!")
+    if answer == num1 + num2:
+        print ("Your answer is correct.")
+        return correct
+    else:
+        print ("Your answer is incorrect.")
+        return incorrect
+
+def displayresult (num1, num2, num3, num4, num5, num6, num7, num8, num9, num10):
+    result = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10
+    time.sleep(1)
+    print (f"Based from the results, your total score is {result}/10.")
+    time.sleep (1)
+    print ("Thank you for answering the quiz!")
 
 number1 = first ()
 
@@ -184,4 +208,8 @@ time.sleep (2)
 
 number9 = ninth ()
 
-results = displayresult (number1, number2, number3, number4, number5, number6, number7, number8, number9)
+time.sleep (2)
+
+number10 = tenth ()
+
+results = displayresult (number1, number2, number3, number4, number5, number6, number7, number8, number9, number10)
