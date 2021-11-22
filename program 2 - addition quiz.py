@@ -97,11 +97,26 @@ def sixth ():
         print ("Your answer is incorrect.")
         return incorrect
 
+def seventh ():
+    correct = int(1)
+    incorrect = int(0)
+    num1 = (random.randint (0, 99))
+    num2 = (random.randint (0, 99))
+    print (f'{num1} + {num2}')
+    answer = int(input("Enter answer: "))
+    time.sleep (1)
+    if answer == num1 + num2:
+        print ("Your answer is correct.")
+        return correct
+    else:
+        print ("Your answer is incorrect.")
+        return incorrect
 
-def displayresult (num1, num2, num3, num4, num5, num6):
-    result = num1 + num2 + num3 + num4 + num5 + num6
+
+def displayresult (num1, num2, num3, num4, num5, num6, num7):
+    result = num1 + num2 + num3 + num4 + num5 + num6 + num7
     time.sleep(1)
-    print (f"Based from the results, your total score is {result}/6.")
+    print (f"Based from the results, your total score is {result}/7.")
     time.sleep (1)
     print ("Thank you for joining the quiz!")
 
@@ -127,4 +142,8 @@ time.sleep (2)
 
 number6 = sixth ()
 
-results = displayresult (number1, number2, number3, number4, number5, number6)
+time.sleep (2)
+
+number7 = seventh
+
+results = displayresult (number1, number2, number3, number4, number5, number6, number7)
