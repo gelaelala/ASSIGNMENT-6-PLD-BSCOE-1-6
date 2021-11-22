@@ -14,10 +14,10 @@ def first ():
     answer =  int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
-        if print ("Correct"):
+        if print ("Your answer is correct."):
             return answer
     else:
-        print ("Incorrect")
+        print ("Your answer is incorrect.")
 
 def second ():
     num1 = (random.randint (0, 99))
@@ -26,13 +26,29 @@ def second ():
     answer =  int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
-        if print ("Correct"):
+        if print ("Your answer is correct."):
             return answer
     else:
-        print ("Incorrect")
+        print ("Your answer is incorrect.")
+
+def third ():
+    num1 = (random.randint (0, 99))
+    num2 = (random.randint (0, 99))
+    print (f'{num1} + {num2}')
+    answer = int(input("Enter answer: "))
+    time.sleep (1)
+    if answer == num1 + num2:
+        if print ("Your answer is correct."):
+            return answer
+    else:
+        print ("Your answer is incorrect.")
 
 first ()
 
 time.sleep (1)
 
 second ()
+
+time.sleep (1)
+
+third ()
