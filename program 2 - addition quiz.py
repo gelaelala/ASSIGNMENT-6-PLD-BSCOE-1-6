@@ -12,7 +12,7 @@ def first ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f"{num1} + {num2}")
+    print (f"1. {num1} + {num2}")
     answer =  int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -27,7 +27,7 @@ def second ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f"{num1} + {num2}")
+    print (f"2. {num1} + {num2}")
     answer =  int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -42,7 +42,7 @@ def third ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f'{num1} + {num2}')
+    print (f'3. {num1} + {num2}')
     answer = int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -57,7 +57,7 @@ def fourth ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f'{num1} + {num2}')
+    print (f'4. {num1} + {num2}')
     answer = int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -72,7 +72,7 @@ def fifth ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f'{num1} + {num2}')
+    print (f'5. {num1} + {num2}')
     answer = int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -87,7 +87,7 @@ def sixth ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f'{num1} + {num2}')
+    print (f'6. {num1} + {num2}')
     answer = int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -102,7 +102,37 @@ def seventh ():
     incorrect = int(0)
     num1 = (random.randint (0, 99))
     num2 = (random.randint (0, 99))
-    print (f'{num1} + {num2}')
+    print (f'7. {num1} + {num2}')
+    answer = int(input("Enter answer: "))
+    time.sleep (1)
+    if answer == num1 + num2:
+        print ("Your answer is correct.")
+        return correct
+    else:
+        print ("Your answer is incorrect.")
+        return incorrect
+
+def eight ():
+    correct = int(1)
+    incorrect = int(0)
+    num1 = (random.randint (0, 99))
+    num2 = (random.randint (0, 99))
+    print (f'8. {num1} + {num2}')
+    answer = int(input("Enter answer: "))
+    time.sleep (1)
+    if answer == num1 + num2:
+        print ("Your answer is correct.")
+        return correct
+    else:
+        print ("Your answer is incorrect.")
+        return incorrect
+
+def ninth ():
+    correct = int(1)
+    incorrect = int(0)
+    num1 = (random.randint (0, 99))
+    num2 = (random.randint (0, 99))
+    print (f'9. {num1} + {num2}')
     answer = int(input("Enter answer: "))
     time.sleep (1)
     if answer == num1 + num2:
@@ -113,10 +143,10 @@ def seventh ():
         return incorrect
 
 
-def displayresult (num1, num2, num3, num4, num5, num6, num7):
-    result = num1 + num2 + num3 + num4 + num5 + num6 + num7
+def displayresult (num1, num2, num3, num4, num5, num6, num7, num8, num9):
+    result = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9
     time.sleep(1)
-    print (f"Based from the results, your total score is {result}/7.")
+    print (f"Based from the results, your total score is {result}/9.")
     time.sleep (1)
     print ("Thank you for joining the quiz!")
 
@@ -144,6 +174,14 @@ number6 = sixth ()
 
 time.sleep (2)
 
-number7 = seventh
+number7 = seventh ()
 
-results = displayresult (number1, number2, number3, number4, number5, number6, number7)
+time.sleep (2)
+
+number8 = eight ()
+
+time.sleep (2)
+
+number9 = ninth ()
+
+results = displayresult (number1, number2, number3, number4, number5, number6, number7, number8, number9)
