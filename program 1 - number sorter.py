@@ -9,56 +9,11 @@ def getnumbers():
     number4 = float(input("Enter fourth number: "))
     return number1, number2, number3, number4
 
-def highestnumber(num1_, num2_, num3_, num4_):
+def sortnumber(num1_, num2_, num3_, num4_):
     if num1_ > num2_ and num1_ > num3_:
-        return num1_
-    elif num2_ > num3_ and num2_ > num4_:
-        return num2_
-    elif num3_ > num4_:
-        return num3_
-    else:
-        return num4_
-
-def secondhighest (num1_, num2_, num3_, num4_):
-    if num1_ < num2_ and num2_ < num3_:
-        return num1_
-    elif num2_ < num3_ and num3_ < num4_:
-        return num2_
-    elif num3_ < num4_ and num4_ < num1_:
-        return num3_
-    else:
-        return num4_
-
-def thirdhighest (num1_, num2_, num3_, num4_):
-    max = num2_
-    if num1_ != max:
-        return max
-    elif num2_ != max:
-        return max
-    elif num4_ != max:
-        return max
-
-def lowestnumber (num1_, num2_, num3_, num4_):
-    if num1_ < num2_ and num1_ < num3_:
-        return num1_
-    elif num2_ < num3_ and num2_ < num4_:
-        return num2_
-    elif num3_ < num4_:
-        return num3_
-    else:
-        return num4_
-
-def displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_):
-    print (f'The order of the numbers you entered from highest to lowest is: {highestnumber_}, {secondhighest_}, {thirdhighest_}, {lowestnumber_}.')
+        if num2_ > num3_ and num3_ > num4_:
+            print (f'The order of the numbers that you entered, from highest to lowest, is {num1_}, {num2_}, {num3_}, {num4_}. ')
 
 num1, num2, num3, num4 = getnumbers()
 
-highestnumber_ = highestnumber (num1, num2, num3, num4)
-
-secondhighest_ = secondhighest (num1, num2, num3, num4)
-
-thirdhighest_ = thirdhighest (num1, num2, num3, num4)
-
-lowestnumber_ = lowestnumber (num1, num2, num3, num4)
-
-displayorder (highestnumber_, secondhighest_, thirdhighest_, lowestnumber_)
+sortnumber (num1, num2, num3, num4)
