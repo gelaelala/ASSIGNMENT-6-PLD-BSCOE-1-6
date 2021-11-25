@@ -14,6 +14,21 @@ def sortnumber(num1_, num2_, num3_, num4_):
         if num2_ > num3_ and num3_ > num4_:
             print (f'The order of the numbers that you entered, from highest to lowest, is {num1_}, {num2_}, {num3_}, {num4_}. ')
 
+def sortnumber2(num1_, num2_, num3_, num4_):
+            if num1_ > num2_ and num1_ > num3_:
+                if num2_ > num3_ and num2_ > num4_:
+                    if num4_ > num3_:
+                        print (f'The order of the numbers that you entered, from highest to lowest, is {num1_}, {num2_}, {num4_}, {num3_}. ')
+
+def sortnumber3(num1_, num2_, num3_, num4_):
+            if num1_ > num2_ and num1_ > num3_:
+                if num3_ > num2_ and num2_ > num4_:
+                        print (f'The order of the numbers that you entered, from highest to lowest, is {num1_}, {num3_}, {num2_}, {num4_}. ')
+
 num1, num2, num3, num4 = getnumbers()
 
 sortnumber (num1, num2, num3, num4)
+
+sortnumber2 (num1, num2, num3, num4)
+
+sortnumber3 (num1, num2, num3, num4)
